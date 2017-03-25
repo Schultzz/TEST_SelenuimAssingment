@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.testinfected.hamcrest-matchers:core-matchers:1.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testinfected.hamcrest-matchers/core-matchers/1.8/c99c4e3c15425228a059d42a2238958d267b05f7/core-matchers-1.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testinfected.hamcrest-matchers/core-matchers/1.8/41d0e399897511a2f3b00df46cbc37bf575bf3b2/core-matchers-1.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

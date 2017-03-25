@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.testinfected.hamcrest-matchers:validation-matchers:1.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testinfected.hamcrest-matchers/validation-matchers/1.8/9126a84b6dcdab505117e4d54dd095dce0ab93bb/validation-matchers-1.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testinfected.hamcrest-matchers/validation-matchers/1.8/18e86191629a01afdfa1505d880b8fb92abfa05e/validation-matchers-1.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
