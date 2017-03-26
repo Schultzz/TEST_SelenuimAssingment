@@ -17,6 +17,9 @@ import java.util.List;
  */
 //Naming standards: http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
 
+//Question LAM: The statement 'You should never write tests that need to be executed in a specified order. That's  really bad practice. Every test should be able to run independent'.
+//The suggested specified order in this assignment, is that ok when we're doing Senario testing?
+
 public class UITest {
 
     private static WebDriver driver;
@@ -25,6 +28,7 @@ public class UITest {
     @BeforeClass
     public static void setUpClass() {
         System.setProperty("webdriver.chrome.driver", "/home/ms/seleniumDrivers/chromedriver");
+        RestAssured.given().get("http://localhost:3000/reset");
         driver = new ChromeDriver();
         driver.get("http://localhost:3000/");
     }
@@ -34,14 +38,20 @@ public class UITest {
         driver.quit();
     }
 
-    @Before
-    public void setUp() {
+    @After
+    public void tearDownEach() {
         driver.navigate().refresh();
+        resetDatabase();
+    }
+
+    private void resetDatabase() {
         RestAssured.given().get("http://localhost:3000/reset");
     }
 
     @Test
     public void load_dataIsLoaded_returnsFiveRows() {
+        //Don't know why, the after fixture ain't working for this test case. Need to call refresh again.
+        driver.navigate().refresh();
 
         (new WebDriverWait(driver, timeout)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
