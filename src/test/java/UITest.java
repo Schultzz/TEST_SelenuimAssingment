@@ -28,7 +28,6 @@ public class UITest {
     @BeforeClass
     public static void setUpClass() {
         System.setProperty("webdriver.chrome.driver", "/home/ms/seleniumDrivers/chromedriver");
-        RestAssured.given().get("http://localhost:3000/reset");
         driver = new ChromeDriver();
         driver.get("http://localhost:3000/");
     }
